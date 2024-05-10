@@ -105,7 +105,53 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                         ),
-                      )
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(
+                  context,
+                  '/prierScreen',
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                        width: 300,
+                        height: 210,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(105),
+                            bottomRight: Radius.circular(105),
+                          ),
+                          image: DecorationImage(
+                            image: AssetImage('images/preire.gif'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          top: 20,
+                          left: 8,
+                        ),
+                        child: Center(
+                          child: Text(
+                            " أوقات الصلاة ",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ],

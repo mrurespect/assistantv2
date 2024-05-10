@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intelligentassistant/chat_screen.dart';
 import 'package:intelligentassistant/homePage.dart';
+import 'package:intelligentassistant/priereScreen.dart';
 import 'package:intelligentassistant/weatherScreen.dart';
 
 void main() {
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/chatscreen': (context) => ChatScreen(),
         '/weatherpage': (context) => WeatherPage(),
+        '/prierScreen': (context) => PriereScreen(),
       },
     );
   }
