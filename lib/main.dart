@@ -3,6 +3,7 @@ import 'package:intelligentassistant/chat_screen.dart';
 import 'package:intelligentassistant/homePage.dart';
 import 'package:intelligentassistant/priereScreen.dart';
 import 'package:intelligentassistant/weatherScreen.dart';
+import 'package:intelligentassistant/positionAndNearbyPlaces/position.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/chatscreen': (context) => ChatScreen(),
         '/weatherpage': (context) => WeatherPage(),
+        '/location' : (context) => GetUserLocation(),
         '/prierScreen': (context) => PriereScreen(),
       },
     );
