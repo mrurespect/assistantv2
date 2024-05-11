@@ -120,7 +120,7 @@ class _WeatherPageState extends State<WeatherPage> {
                           color: Colors.black.withOpacity(0.5),
                           spreadRadius: 5,
                           blurRadius: 7,
-                          offset: Offset(0, 3), 
+                          offset: Offset(0, 3),
                         ),
                       ],
                     ),
@@ -139,7 +139,9 @@ class _WeatherPageState extends State<WeatherPage> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 30,),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 30,
+                          ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [

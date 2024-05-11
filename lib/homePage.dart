@@ -6,7 +6,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black87,
+      backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -15,8 +15,8 @@ class HomePage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(0.0),
-              child: TextButton(
-                onPressed: () {
+              child: GestureDetector(
+                onTap: () {
                   Navigator.pushNamed(
                     context,
                     '/chatscreen',
@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
                       children: [
                         Container(
                           width: 300,
-                          height: 150,
+                          height: 210,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(105),
@@ -65,8 +65,8 @@ class HomePage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            TextButton(
-              onPressed: () {
+            GestureDetector(
+              onTap: () {
                 Navigator.pushNamed(
                   context,
                   '/weatherpage',
@@ -79,7 +79,7 @@ class HomePage extends StatelessWidget {
                     children: [
                       Container(
                         width: 300,
-                        height: 150,
+                        height: 210,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(105),
@@ -111,63 +111,17 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            TextButton(
-              onPressed: () {
-                Navigator.pushNamed(
-                  context,
-                  '/prierScreen',
-                );
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Column(
-                    children: [
-                      Container(
-                        width: 300,
-                        height: 210,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(105),
-                            bottomRight: Radius.circular(105),
-                          ),
-                          image: DecorationImage(
-                            image: AssetImage('images/preire.gif'),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          top: 20,
-                          left: 8,
-                        ),
-                        child: Center(
-                          child: Text(
-                            " أوقات الصلاة ",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
             SizedBox(
               height: 20,
             ),
             Padding(
               padding: const EdgeInsets.all(0.0),
-              child: TextButton(
-                onPressed: () {
-                  Navigator.pushNamed(
-                    context,
-                    '/todo',
-                  );
+              child: GestureDetector(
+                onTap: () {
+                  // Navigator.pushNamed(
+                  //   context,
+                  //   '/todo',
+                  // );
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -176,7 +130,7 @@ class HomePage extends StatelessWidget {
                       children: [
                         Container(
                           width: 300,
-                          height: 150,
+                          height: 210,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(105),
@@ -209,7 +163,55 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-
+            SizedBox(
+              height: 20,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  '/prierScreen',
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                        width: 300,
+                        height: 210,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(105),
+                            bottomRight: Radius.circular(105),
+                          ),
+                          image: DecorationImage(
+                            image: AssetImage('images/preire.gif'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          top: 20,
+                          left: 8,
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Prayer Times",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
