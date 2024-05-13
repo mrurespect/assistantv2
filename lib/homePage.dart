@@ -118,10 +118,10 @@ class HomePage extends StatelessWidget {
               padding: const EdgeInsets.all(0.0),
               child: GestureDetector(
                 onTap: () {
-                  // Navigator.pushNamed(
-                  //   context,
-                  //   '/todo',
-                  // );
+                  Navigator.pushNamed(
+                     context,
+                     '/todo',
+                   );
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,

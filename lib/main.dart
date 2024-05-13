@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:intelligentassistant/TodoPage.dart';
 import 'package:intelligentassistant/chat_screen.dart';
 import 'package:intelligentassistant/homePage.dart';
 import 'package:intelligentassistant/priereScreen.dart';
+import 'package:intelligentassistant/tasks/presentation/screens/home_screen.dart';
 import 'package:intelligentassistant/weatherScreen.dart';
 import 'package:intelligentassistant/positionAndNearbyPlaces/position.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 
 void main() {
-  runApp(const MyApp());
+  runApp(ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -25,6 +29,7 @@ class MyApp extends StatelessWidget {
         '/weatherpage': (context) => WeatherPage(),
         '/location' : (context) => GetUserLocation(),
         '/prierScreen': (context) => PriereScreen(),
+        '/todo': (context) => HomeScreen(),
       },
     );
   }
