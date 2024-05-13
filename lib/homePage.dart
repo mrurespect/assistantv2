@@ -250,7 +250,7 @@ class HomePage extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "My location",
+                              "Maps",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
