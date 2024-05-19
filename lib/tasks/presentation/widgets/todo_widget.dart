@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'custom_dialog_deletetodo.dart';
-import 'custom_iconbutton.dart';
+import 'package:intelligentassistant/tasks/presentation/widgets/custom_dialog_deletetodo.dart';
+import 'package:intelligentassistant/tasks/presentation/widgets/custom_iconbutton.dart';
 
 class TodoWidget extends StatelessWidget {
   final String id;

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'custom_searchbar.dart';
+import 'package:intelligentassistant/tasks/presentation/widgets/custom_searchbar.dart';
 
 class WelcomeCard extends StatelessWidget {
   final int completedCounter;
@@ -14,7 +13,6 @@ class WelcomeCard extends StatelessWidget {
     required this.pendingCounter,
     required this.remindersCounter,
   });
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -49,7 +47,7 @@ class WelcomeCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hi Ivan 👋',
+                    'Hi User 👋',
                     style: GoogleFonts.roboto(
                       color: Colors.white,
                       fontSize: 28,
@@ -74,37 +72,7 @@ class WelcomeCard extends StatelessWidget {
                     typeTask: 'completed',
                     iconData: Icons.check_circle,
                   ),
-                  TasksCounterCard(
-                    tasksCounter: remindersCounter,
-                    typeTask: 'reminders',
-                    iconData: Icons.check_circle,
-                  ),
                 ],
-              ),
-            ),
-          ),
-
-          // SEARCHBAR
-          Positioned(
-            right: 0,
-            top: 0,
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: AnimSearchBar(
-                autoFocus: false,
-                width: MediaQuery.of(context).size.width * 0.9,
-                textController: TextEditingController(),
-                prefixIcon:
-                    const Icon(Icons.search_rounded, color: Color(0xff9C9A9A)),
-                suffixIcon:
-                    const Icon(Icons.clear_rounded, color: Color(0xff9C9A9A)),
-                textFieldIconColor: const Color(0xff9C9A9A),
-                style: GoogleFonts.roboto(color: const Color(0xff9C9A9A)),
-                cursorColor: const Color(0xff9C9A9A),
-                onSuffixTap: () {},
-                onSubmitted: (value) {
-                  // print(value);
-                },
               ),
             ),
           ),

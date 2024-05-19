@@ -1,8 +1,8 @@
-import 'package:intelligentassistant/tasks/data/todos_repository.dart';
 import 'package:isar/isar.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'package:uuid/uuid.dart';
+import '../data/todos_repository.dart';
 
 import '../domain/todo.dart';
 

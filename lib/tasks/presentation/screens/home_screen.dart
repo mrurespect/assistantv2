@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:intelligentassistant/tasks/presentation/widgets/custom_botton_navbar.dart';
+import 'package:intelligentassistant/tasks/presentation/widgets/custom_dialog_newtodo.dart';
+import 'package:intelligentassistant/tasks/presentation/widgets/todo_widget.dart';
+import 'package:intelligentassistant/tasks/presentation/widgets/welcome_card.dart';
 import '../provider/tasks_counter_providers.dart';
 import '../provider/todos_provider.dart';
-import '../widgets/custom_botton_navbar.dart';
-import '../widgets/custom_dialog_newtodo.dart';
-import '../widgets/todo_widget.dart';
-import '../widgets/welcome_card.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

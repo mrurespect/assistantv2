@@ -12,9 +12,10 @@ part of 'todo.dart';
 extension GetTodoCollection on Isar {
   IsarCollection<Todo> get todos => this.collection();
 }
+
 const TodoSchema = CollectionSchema(
   name: r'Todo',
-  id: -9007199254740991, // Changed this line
+  id: -505491818817781703,
   properties: {
     r'completed': PropertySchema(
       id: 0,

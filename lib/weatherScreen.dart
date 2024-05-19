@@ -82,20 +82,46 @@ class _WeatherPageState extends State<WeatherPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                const Color(0xff007EF4),
+                const Color(0xff2A75BC),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(60.0),
+            ),
+          ),
+        ),
+        centerTitle: true,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(width: 10),
+            Text(
+              'Weather  $city',
+              style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold),
+            ),
+            Spacer(), // Ajout de Spacer pour centrer le texte et l'image
+          ],
+        ),
+        backgroundColor: Colors
+            .transparent, // Rendre l'arrière-plan de l'AppBar transparent pour voir le dégradé
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: Text(
-                'Weather  $city',
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey[700]),
-                textAlign: TextAlign.center,
-              ),
             ),
             SizedBox(height: 10),
             Expanded(
@@ -115,9 +141,11 @@ class _WeatherPageState extends State<WeatherPage> {
                     margin: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: Colors.white,
+                      borderRadius:
+                          BorderRadius.circular(20), // Ajout d'un bord arrondi
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.5),
+                          color: Colors.black.withOpacity(0.3),
                           spreadRadius: 5,
                           blurRadius: 7,
                           offset: Offset(0, 3),
@@ -134,7 +162,8 @@ class _WeatherPageState extends State<WeatherPage> {
                           child: Text(
                             '$description',
                             style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 18,
                                 color: Colors.black),
                           ),
                         ),
@@ -145,15 +174,18 @@ class _WeatherPageState extends State<WeatherPage> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              Image.network(
-                                '$iconUrl',
-                                fit: BoxFit.contain,
+                              Container(
+                                width: 60,
+                                child: Image.network(
+                                  '$iconUrl',
+                                  fit: BoxFit.contain,
+                                ),
                               ),
                               Text(
                                 '$temperature°C',
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                                    color: Colors.orange),
                               ),
                             ],
                           ),
@@ -163,11 +195,11 @@ class _WeatherPageState extends State<WeatherPage> {
                           children: [
                             Icon(
                               Icons.location_on,
-                              color: Colors.black,
-                              size: 20,
+                              color: Colors.blue,
+                              size: 30,
                             ),
                             SizedBox(
-                              width: 20,
+                              width: 6,
                             ),
                             Text(
                               '$city',

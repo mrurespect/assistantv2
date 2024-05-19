@@ -97,6 +97,37 @@ class _PriereScreenState extends State<PriereScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                const Color(0xff007EF4),
+                const Color(0xff2A75BC),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+        ),
+        centerTitle: true,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(width: 10),
+            Text(
+              'Prayer',
+              style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold),
+            ),
+            Spacer(), // Ajout de Spacer pour centrer le texte et l'image
+          ],
+        ),
+        backgroundColor: Colors
+            .transparent, // Rendre l'arrière-plan de l'AppBar transparent pour voir le dégradé
+      ),
       backgroundColor: Colors.transparent,
       body: SingleChildScrollView(
         child: Stack(
@@ -146,6 +177,13 @@ class _PriereScreenState extends State<PriereScreen> {
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
+                                shadows: [
+                                  Shadow(
+                                    offset: Offset(2.0, 2.0),
+                                    blurRadius: 3.0,
+                                    color: Color.fromARGB(255, 0, 0, 0),
+                                  ),
+                                ],
                               ),
                             ),
                             Text(
@@ -153,6 +191,13 @@ class _PriereScreenState extends State<PriereScreen> {
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
+                                shadows: [
+                                  Shadow(
+                                    offset: Offset(2.0, 2.0),
+                                    blurRadius: 3.0,
+                                    color: Color.fromARGB(255, 0, 0, 0),
+                                  ),
+                                ],
                               ),
                             ),
                             Padding(
@@ -165,16 +210,32 @@ class _PriereScreenState extends State<PriereScreen> {
                                   Text(
                                     "Fajr ",
                                     style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.bold),
+                                      color: Colors.white,
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      shadows: [
+                                        Shadow(
+                                          offset: Offset(2.0, 2.0),
+                                          blurRadius: 3.0,
+                                          color: Color.fromARGB(255, 0, 0, 0),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                   Text(
                                     " ${prayerTimes['Fajr']}",
                                     style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.bold),
+                                      color: Colors.white,
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      shadows: [
+                                        Shadow(
+                                          offset: Offset(2.0, 2.0),
+                                          blurRadius: 3.0,
+                                          color: Color.fromARGB(255, 0, 0, 0),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),
@@ -189,16 +250,32 @@ class _PriereScreenState extends State<PriereScreen> {
                                   Text(
                                     "Dhuhr ",
                                     style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.bold),
+                                      color: Colors.white,
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      shadows: [
+                                        Shadow(
+                                          offset: Offset(2.0, 2.0),
+                                          blurRadius: 3.0,
+                                          color: Color.fromARGB(255, 0, 0, 0),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                   Text(
                                     " ${prayerTimes['Dhuhr']}",
                                     style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.bold),
+                                      color: Colors.white,
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      shadows: [
+                                        Shadow(
+                                          offset: Offset(2.0, 2.0),
+                                          blurRadius: 3.0,
+                                          color: Color.fromARGB(255, 0, 0, 0),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),
@@ -213,16 +290,32 @@ class _PriereScreenState extends State<PriereScreen> {
                                   Text(
                                     "Asr ",
                                     style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.bold),
+                                      color: Colors.white,
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      shadows: [
+                                        Shadow(
+                                          offset: Offset(2.0, 2.0),
+                                          blurRadius: 3.0,
+                                          color: Color.fromARGB(255, 0, 0, 0),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                   Text(
                                     " ${prayerTimes['Asr']}",
                                     style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.bold),
+                                      color: Colors.white,
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      shadows: [
+                                        Shadow(
+                                          offset: Offset(2.0, 2.0),
+                                          blurRadius: 3.0,
+                                          color: Color.fromARGB(255, 0, 0, 0),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),
@@ -237,16 +330,32 @@ class _PriereScreenState extends State<PriereScreen> {
                                   Text(
                                     "Maghrib ",
                                     style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.bold),
+                                      color: Colors.white,
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      shadows: [
+                                        Shadow(
+                                          offset: Offset(2.0, 2.0),
+                                          blurRadius: 3.0,
+                                          color: Color.fromARGB(255, 0, 0, 0),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                   Text(
                                     " ${prayerTimes['Maghrib']}",
                                     style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.bold),
+                                      color: Colors.white,
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      shadows: [
+                                        Shadow(
+                                          offset: Offset(2.0, 2.0),
+                                          blurRadius: 3.0,
+                                          color: Color.fromARGB(255, 0, 0, 0),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),
@@ -261,16 +370,32 @@ class _PriereScreenState extends State<PriereScreen> {
                                   Text(
                                     "Isha ",
                                     style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.bold),
+                                      color: Colors.white,
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      shadows: [
+                                        Shadow(
+                                          offset: Offset(2.0, 2.0),
+                                          blurRadius: 3.0,
+                                          color: Color.fromARGB(255, 0, 0, 0),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                   Text(
                                     " ${prayerTimes['Isha']}",
                                     style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.bold),
+                                      color: Colors.white,
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      shadows: [
+                                        Shadow(
+                                          offset: Offset(2.0, 2.0),
+                                          blurRadius: 3.0,
+                                          color: Color.fromARGB(255, 0, 0, 0),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),

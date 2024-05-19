@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:intelligentassistant/tasks/presentation/provider/todos_repository_provider.dart';
 
 import '../../data/todos_repository.dart';
 import '../../domain/todo.dart';
+import 'todos_repository_provider.dart';
 
 enum TodoFilter { all, completed, pending, reminders }
 

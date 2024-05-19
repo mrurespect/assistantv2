@@ -144,7 +144,8 @@ class _AnimSearchBarState extends State<AnimSearchBar>
       height: widget.height,
 
       ///if the rtl is true, search bar will be from right to left
-      alignment: widget.rtl ? Alignment.centerRight : const Alignment(-1.0, 0.0),
+      alignment:
+          widget.rtl ? Alignment.centerRight : const Alignment(-1.0, 0.0),
 
       ///Using Animated container to expand and shrink the widget
       child: AnimatedContainer(
@@ -231,11 +232,12 @@ class _AnimSearchBarState extends State<AnimSearchBar>
                       },
 
                       ///suffixIcon is of type Icon
-                      child: widget.suffixIcon ?? Icon(
-                              Icons.close,
-                              size: 20.0,
-                              color: widget.textFieldIconColor,
-                            ),
+                      child: widget.suffixIcon ??
+                          Icon(
+                            Icons.close,
+                            size: 20.0,
+                            color: widget.textFieldIconColor,
+                          ),
                     ),
                   ),
                 ),
@@ -256,7 +258,6 @@ class _AnimSearchBarState extends State<AnimSearchBar>
                   alignment: Alignment.topCenter,
                   width: widget.width / 1.7,
                   child: TextField(
-                    
                     ///Text Controller. you can manipulate the text inside this textField by calling this controller.
                     controller: widget.textController,
                     inputFormatters: widget.inputFormatters,
